@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="15dp"
+    app:cardCornerRadius="18dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginHorizontal="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#E6242A32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/poster_itemMain"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image1"
+            android:adjustViewBounds="true"
+            android:layout_width="125dp"
+            android:layout_height="160dp"/>
+
+        <me.tankery.lib.circularseekbar.CircularSeekBar
+            android:id="@+id/circle_progress_barMain"
+            app:layout_constraintTop_toTopOf="@id/poster_itemMain"
+            app:layout_constraintBottom_toBottomOf="@id/poster_itemMain"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:cs_circle_progress_color = "#20C774"
+            app:cs_progress = "83"
+            app:cs_lock_enabled = "true"
+            android:layout_margin="8dp"
+            android:background="@drawable/vote_avarage_text_back"
+            android:layout_width="52dp"
+            android:layout_height="52dp"/>
+
+        <TextView
+            android:id="@+id/vote_average_textMain"
+            app:layout_constraintTop_toTopOf="@id/circle_progress_barMain"
+            app:layout_constraintBottom_toBottomOf="@id/circle_progress_barMain"
+            app:layout_constraintLeft_toLeftOf="@id/circle_progress_barMain"
+            app:layout_constraintRight_toRightOf="@id/circle_progress_barMain"
+            android:text="8.3"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/titleTextMain"
+            app:layout_constraintRight_toLeftOf="@id/circle_progress_barMain"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/poster_itemMain"
+            app:layout_constraintVertical_bias="0.1"
+            android:text="@string/title"
+            android:layout_marginTop="3dp"
+            android:layout_marginHorizontal="12dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/title_textMain"
+            app:layout_constraintTop_toBottomOf="@id/titleTextMain"
+            app:layout_constraintRight_toLeftOf="@id/circle_progress_barMain"
+            app:layout_constraintLeft_toRightOf="@id/poster_itemMain"
+            android:layout_marginHorizontal="12dp"
+            android:textSize="14sp"
+            android:text="Spider-Man: No Way Home"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/releaseDateMain"
+            app:layout_constraintTop_toBottomOf="@id/title_textMain"
+            app:layout_constraintRight_toLeftOf="@id/circle_progress_barMain"
+            app:layout_constraintLeft_toRightOf="@id/poster_itemMain"
+            android:layout_marginTop="3dp"
+            android:layout_marginHorizontal="12dp"
+            android:text="@string/release_date"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/release_dateMain"
+            app:layout_constraintTop_toBottomOf="@id/releaseDateMain"
+            app:layout_constraintRight_toLeftOf="@id/circle_progress_barMain"
+            app:layout_constraintLeft_toRightOf="@id/poster_itemMain"
+            android:layout_marginHorizontal="12dp"
+            android:text="2021-12-15"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/averageRatingMain"
+            app:layout_constraintTop_toBottomOf="@id/release_dateMain"
+            app:layout_constraintRight_toLeftOf="@id/circle_progress_barMain"
+            app:layout_constraintLeft_toRightOf="@id/poster_itemMain"
+            android:layout_marginTop="3dp"
+            android:layout_marginHorizontal="12dp"
+            android:text="@string/average_rating"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/average_ratingMain"
+            app:layout_constraintTop_toBottomOf="@id/averageRatingMain"
+            app:layout_constraintRight_toLeftOf="@id/circle_progress_barMain"
+            app:layout_constraintLeft_toRightOf="@id/poster_itemMain"
+            android:layout_marginHorizontal="12dp"
+            android:text="8.3"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

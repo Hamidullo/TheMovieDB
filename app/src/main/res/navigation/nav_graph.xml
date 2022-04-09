@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/popularFragment">
+
+    <fragment
+        android:id="@+id/popularFragment"
+        android:name="com.example.movie.ui.PopularFragment"
+        android:label="Popular"
+        tools:layout="@layout/popular_fragment" >
+        <action
+            android:id="@+id/action_popularFragment_to_topRatedFragment"
+            app:destination="@id/topRatedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topRatedFragment"
+        android:name="com.example.movie.ui.TopRatedFragment"
+        android:label="Top Rated"
+        tools:layout="@layout/top_rated_fragment" >
+        <action
+            android:id="@+id/action_topRatedFragment_to_upcomingFragment"
+            app:destination="@id/upcomingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingFragment"
+        android:name="com.example.movie.ui.UpcomingFragment"
+        android:label="Upcoming"
+        tools:layout="@layout/upcoming_fragment" >
+    </fragment>
+
+</navigation>
